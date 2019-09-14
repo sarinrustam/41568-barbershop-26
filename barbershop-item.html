@@ -19,7 +19,7 @@
             </ul>
             <img src="img/login.svg" width="14" height="14" alt="Иконка входа">
             <ul>
-                <li><button type="button">Войти</button></li>
+                <li><a href="login.html">Вход</a></li>
             </ul>
         </nav>
     </header>
@@ -34,7 +34,7 @@
         </ul>
 
         <section>
-            <h2>Изображение товара</h2>
+            <h2 class="visually-hidden">Изображение товара</h2>
             <p>
                 <img src="img/product-big.jpg" width="460" height="498" alt="Фото всего набора">
             </p>
@@ -46,7 +46,7 @@
         </section>
 
         <section>
-            <h2>Описание товара</h2>
+            <h2 class="visually-hidden">Описание товара</h2>
             <p>Есть в наличии</p>
             <p>Артикул: dexter-ae</p>
             <p>Travel Kit – необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем для бритья,
@@ -86,10 +86,26 @@
         </p>
     </footer>
 
-    <section>
-        <h2>Личный кабинет</h2>
+    <section class="visually hidden">
+        <h2 class="visually-hidden">Личный кабинет</h2>
         <p>Введите свой логин и пароль</p>
         <!-- Здесь будет форма -->
+        <form action="https://echo.htmlacademy.ru" method="POST">
+            <p>
+                <label for="user-login">Логин</label>
+                <input id="user-login" type="text" name="login" placeholder="email@example.com">
+            </p>
+            <p>
+                <label for="user-password">Пароль</label>
+                <input id="user-password" type="password" name="password" placeholder="*********">
+            </p>
+            <p>
+                <input id="user-password-info" type="checkbox" name="remember">
+                <label for="user-password-info">Запомните меня</label>
+                <a href="#">Я забыл пароль</a>
+            </p>
+            <button type="submit">Войти</button>
+        </form>
         <button type="button">Закрыть</button>
     </section>
 </body>

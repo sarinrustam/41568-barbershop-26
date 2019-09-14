@@ -19,7 +19,7 @@
             </ul>
             <img src="img/login.svg" width="14" height="14" alt="Иконка входа">
             <ul>
-                <li><button type="button">Войти</button></li>
+                <li><a href="login.html">Вход</a></li>
             </ul>
         </nav>
     </header>
@@ -33,25 +33,72 @@
             <li>Средства для ухода</li>
         </ul>
         <section>
-            <h2>Фильтр товаров</h2>
+            <h2 class="visually-hidden">Фильтр товаров</h2>
             <!-- Здесь будет форма -->
+            <form action="https://echo.htmlacademy.ru" method="POST">
+                <fieldset>
+                    <legend>Производители</legend>
+                    <ul>
+                        <li>
+                            <input id="filter-baxter" type="checkbox" name="baxter-of-california" checked>
+                            <label for="filter-baxter">Baxter of California»</label>
+                        </li>
+                        <li>
+                            <input id="filter-natty" type="checkbox" name="mr-natty">
+                            <label for="filter-natty">Mr Natty</label>
+                        </li>
+                        <li>
+                            <input id="filter-suavecito" type="checkbox" name="suavecito" checked>
+                            <label for="filter-suavecito">Suavecito</label>
+                        </li>
+                        <li>
+                            <input id="filter-malin" type="checkbox" name="malin-goetz">
+                            <label for="filter-malin">Malin+Goetz</label>
+                        </li>
+                        <li>
+                            <input id="filter-murrays" type="checkbox" name="murrays">
+                            <label for="filter-murrays">Murray’s</label>
+                        </li>
+                        <li>
+                            <input id="filter-american" type="checkbox" name="american-crew" checked>
+                            <label for="filter-american">American Crew</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Группы товаров:</legend>
+                    <ul>
+                        <li>
+                            <input id="filter-shave" type="radio" name="product-group" value="shaving">
+                            <label for="filter-shave">Бритвенные принадлежности</label>
+                        </li>
+                        <li>
+                            <input id="filter-care" type="radio" name="product-group" value="hair-care">
+                            <label for="filter-care">Средства для ухода</label>
+                        </li>
+                        <li>
+                            <input id="filter-accessories" type="radio" name="product-group" value="accessories">
+                            <label for="filter-accessories">Аксессуары</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <button type="submit">Показать</button>
+            </form>
         </section>
 
         <section>
-            <h2>Список средств для ухода</h2>
+            <h2 class="visually-hidden">Список средств для ухода</h2>
             <ul>
                 <li>
-                    <h3>
-                        <a href="catalog-item.html">
+                    <a href="catalog-item.html">
+                        <h3>
                             <span>Набор для путешествий</span>
                             <span>«Baxter of California»</span>
-                        </a>
-                    </h3>
-                    <p>
-                        <a href="catalog-item.html">
+                        </h3>
+                        <p>
                             <img src="img/product-1.jpg" width="220" height="165" alt="Набор для путешествий «Baxter of California»">
-                        </a>
-                    </p>
+                        </p>
+                    </a>
                     <p>
                         2 900 ₽
                         <a href="#">Купить</a>
@@ -173,10 +220,26 @@
         </p>
     </footer>
 
-    <section>
-        <h2>Личный кабинет</h2>
+    <section class="visually hidden">
+        <h2 class="visually-hidden">Личный кабинет</h2>
         <p>Введите свой логин и пароль</p>
         <!-- Здесь будет форма -->
+        <form action="https://echo.htmlacademy.ru" method="POST">
+            <p>
+                <label for="user-login">Логин</label>
+                <input id="user-login" type="text" name="login" placeholder="email@example.com">
+            </p>
+            <p>
+                <label for="user-password">Пароль</label>
+                <input id="user-password" type="password" name="password" placeholder="*********">
+            </p>
+            <p>
+                <input id="user-password-info" type="checkbox" name="remember">
+                <label for="user-password-info">Запомните меня</label>
+                <a href="#">Я забыл пароль</a>
+            </p>
+            <button type="submit">Войти</button>
+        </form>
         <button type="button">Закрыть</button>
     </section>
 </body>
