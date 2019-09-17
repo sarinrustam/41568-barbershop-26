@@ -1,0 +1,23 @@
+{
+  "name": "41568-barbershop-26",
+  "version": "1.0.0",
+  "description": "* Студент: [Рустам Сарин](https://up.htmlacademy.ru/htmlcss/26/user/41568).",
+  "main": "index.js",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarinrustam/41568-barbershop-26.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarinrustam/41568-barbershop-26/issues"
+  },
+  "homepage": "https://github.com/sarinrustam/41568-barbershop-26#readme"
+}
