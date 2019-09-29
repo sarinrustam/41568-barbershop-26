@@ -1,0 +1,91 @@
+.main-header {
+    background-color: rgba(250, 25, 25, 0.3);
+    outline: 1px solid rgba(250, 25, 25);
+}
+
+.main-navigation {
+    background-color: rgba(24, 124, 37, 0.3);
+    outline: 1px solid rgba(24, 124, 37);
+}
+
+.main-header-logo {
+    background-color: rgba(235, 231, 35, 0.445);
+    outline: 1px solid rgb(235, 231, 35);
+}
+
+.site-navigation {
+    background-color: rgba(42, 95, 194, 0.438);
+    outline: 1px solid rgb(42, 95, 194);
+}
+
+.user-navigation {
+    background-color: rgba(14, 240, 165, 0.438);
+    outline: 1px solid rgb(14, 240, 165);
+}
+
+.main-navigation-wrapper {
+    background-color: rgba(253, 122, 122, 0.226);
+    outline: 1px solid rgb(253, 122, 122);
+}
+
+.container-center {
+    background-color: rgba(44, 14, 211, 0.226);
+    outline: 1px solid rgb(44, 14, 211);
+}
+
+.features-list {
+    background-color: rgba(250, 225, 3, 0.527);
+    outline: 1px solid rgba(250, 225, 3);
+}
+
+.features-item {
+    background-color: rgba(3, 250, 229, 0.486);
+    outline: 1px solid rgba(3, 250, 229);
+}
+
+.index-colums {
+    background-color: rgba(240, 15, 15, 0.664);
+    outline: 1px solid rgba(240, 15, 15);
+}
+
+.news {
+    background-color: rgba(15, 240, 34, 0.664);
+    outline: 1px solid rgba(15, 240, 34);
+}
+
+.gallery {
+    background-color: rgba(238, 255, 0, 0.712);
+    outline: 1px solid rgba(238, 255, 0);
+}
+
+.contacts {
+    background-color: rgba(77, 187, 86, 0.37);
+    outline: 1px solid rgba(77, 187, 86);
+}
+
+.appointment {
+    background-color: rgba(150, 13, 241, 0.534);
+    outline: 1px solid rgba(150, 13, 241);
+}
+
+.main-footer {
+    padding: 60px 0;
+    margin-top: 65px;
+    background-color: rgba(76, 108, 250, 0.534);
+    outline: 1px solid rgba(76, 108, 250);
+}
+
+.footer-contacts {
+    background-color: rgba(101, 172, 131, 0.534);
+    outline: 1px solid rgba(101, 172, 131);
+}
+
+.footer-copyrights {
+    background-color: rgba(233, 181, 132, 0.534);
+    outline: 1px solid rgba(233, 181, 132);
+}
+
+.footer-social {
+    background-color: rgba(250, 79, 0, 0.781);
+    outline: 1px solid rgba(250, 79, 0);
+}

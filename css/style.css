@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "PT Sans Narrow", Arial, Helvetica, sans-serif;
+    font-family: "PT Sans Narrow", Arial, sans-serif;
     font-size: 14px;
     line-height: 24px;
     font-weight: 700;
@@ -9,6 +9,28 @@ body {
     text-transform: uppercase;
     background-color: #000000;
     background-image: url("../img/background.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .inner-page {
@@ -19,18 +41,37 @@ body {
     background-repeat: repeat;
 }
 
+.main-header {
+    margin-bottom: 75px;
+}
+
+.inner-page .main-header {
+    margin-bottom: 50px;
+    background-color: #000000;
+}
+
 a {
     text-decoration: none;
 }
 
 .button {
+    display: inline-block;
+    padding: 10px 30px;
+    margin-right: 16px;
     font: inherit;
     text-align: center;
-    vertical-align: middle;
     color: #ffffff;
+    vertical-align: middle;
     text-transform: uppercase;
     background-color: #000000;
     border: none;
+}
+
+.button.disabled,
+.button:disabled {
+    cursor: default;
+    opacity: 0.5;
+    background-color: #000000;
 }
 
 .button:hover,
@@ -40,18 +81,95 @@ a {
 }
 
 .main-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 16px;
     line-height: 20px;
     color: #ffffff;
+    background-color: transparent;
+}
+
+.inner-page .main-navigation {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.main-header-logo {
+    order: 2;
+    width: 368px;
+    height: 153px;
+}
+
+.inner-page .main-header-logo {
+    order: 0;
+    width: 111px;
+    height: 24px;
+    padding: 23px 20px;
+}
+
+.main-navigation-wrapper {
+    width: 100%;
+    margin-bottom: 60px;
+    background-color: #000000;
+}
+
+.main-navigation-wrapper .container {
+    display: flex;
+    justify-content: space-between;
 }
 
 .site-navigation,
 .user-navigation {
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    width: 620px;
+}
+
+.user-navigation {
+    display: flex;
+    width: 140px;
+}
+
+.user-navigation .login-link {
+    position: relative;
+    padding-left: 50px;
+}
+
+.login-link::before {
+    position: absolute;
+    top: 27px;
+    left: 24px;
+    content: "";
+    width: 16px;
+    height: 18px;
+    background-color: #ff0000;
+    background: url("../img/login.svg") 0 0 no-repeat;
+    opacity: 0.3;
+}
+
+.login-link:hover::before,
+.login-link:focus::before,
+.login-link:active::before {
+    opacity: 1;
+}
+
+.inner-page .user-navigation {
+    margin-left: auto;
 }
 
 .site-navigation a,
 .user-navigation a {
+    display: block;
+    padding: 25px 20px;
+    vertical-align: middle;
     color: #ffffff;
 }
 
@@ -62,67 +180,206 @@ a {
     background-color: #242424;
 }
 
+.container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.features {
+    margin-bottom: 80px;
+}
+
 .features-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
-.features-list h3 {
-    font-size: 30px;
-    line-height: 42px;
-    color: #f7f4f1;
-}
-
 .features-item {
+    width: 300px;
     text-align: center;
 }
 
-.index-colums {
-    color: #000000;
-    background-color: #f8f5f2;
-    background-image: url("../img/pattern-light.jpg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-}
-
-.index-colums h2 {
+.features-item h3 {
+    position: relative;
+    margin: 0;
+    margin-bottom: 60px;
     font-size: 30px;
     line-height: 42px;
+}
+
+.features-item h3::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    margin-left: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    transform: rotate(45deg);
+}
+
+.features-item p {
+    margin: 0 10px;
+}
+
+.index-columns {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 80px;
+    margin-bottom: 35px;
+    color: #000000;
+    background-color: #f8f5f2;
+    background-image: url("../img/line.png"), url("../img/pattern-light.jpg");
+    background-position: center, 0 0;
+    background-repeat: no-repeat, repeat;
+}
+
+.index-columns h2 {
+    margin: 0;
+    margin-bottom: 25px;
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.news {
+    width: 380px;
+}
+
+.news-item {
+    margin-bottom: 25px;
+}
+
+.news-item p {
+    margin: 0;
 }
 
 .news-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 25px;
 }
 
-.news-list time {
+.news-item time {
     text-transform: none;
+}
+
+.gallery {
+    width: 300px;
 }
 
 .gallery-content {
     background-color: #cccccc;
     border: 7px solid #ffffff;
+    height: 164px;
+    margin: 0;
+}
+
+.gallery-content img {
+    width: 286px;
+    height: 164px;
+}
+
+.gallery-container {
+    position: relative;
+    height: 260px;
+}
+
+.gallery-button {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    width: 140px;
+    margin: 0;
+}
+
+.gallery-button-back {
+    left: 0;
+}
+
+.gallery-button-next {
+    right: 0;
+}
+
+.contacts {
+    width: 380px;
+}
+
+.contacts p {
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.appointment {
+    width: 300px;
+}
+
+.appointment-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.appointment-info {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.appointment-item {
+    width: 140px;
+    margin: 0;
+    margin-bottom: 10px;
+    background: rgba(234, 255, 45, 0.2);
+    box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+}
+
+.appointment-item label {
+    display: block;
+    margin: 0;
+    margin-bottom: 9px;
+    margin-left: 15px;
 }
 
 .appointment-item input {
     font: inherit;
-    text-align: left;
+    box-sizing: border-box;
+    width: 140px;
+    padding-top: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 7px;
     background-color: transparent;
-    border: 2px solid #000101;
+    border: 2px solid #000000;
 }
 
-.appointment-item input:focus,
-.appointment-item input:hover {
-    border: 2px solid #663D15;
+.appointment .button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-right: 0px;
 }
 
-
-/* Стили для barbershop-shop */
+.appointment-item input:focus {
+    border-color: #663d15;
+}
 
 .page-title {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
     font-size: 30px;
     line-height: 42px;
 }
 
 .breadcrumbs {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
     list-style: none;
 }
 
@@ -139,6 +396,15 @@ a {
     color: #aba9a7;
 }
 
+.catalog-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filters {
+    width: 180px;
+}
+
 .filter fieldset {
     border: none;
 }
@@ -150,7 +416,7 @@ a {
 
 .filter ul {
     list-style: none;
-    font-size: 18px;
+    line-height: 18px;
 }
 
 .filter-input:hover+label,
@@ -163,13 +429,29 @@ a {
     opacity: 0.5;
 }
 
+.catalog {
+    width: 700px;
+}
+
 .catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 25px;
     list-style: none;
 }
 
 .catalog-item {
+    width: 220px;
+    margin-bottom: 20px;
+    margin-right: 20px;
     background-color: #f8f8f8;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-item:nth-child(3n) {
+    margin-right: 0;
 }
 
 .catalog-item:hover {
@@ -202,6 +484,8 @@ a {
 }
 
 .pagination-list {
+    padding: 0;
+    margin: 0;
     list-style: none;
 }
 
@@ -213,7 +497,7 @@ a {
 .pagination-item a:hover,
 .pagination-item a:focus,
 .pagination-item a:active {
-    background-color: #663D15;
+    background-color: #663d15;
 }
 
 .pagination-item-current a {
@@ -228,14 +512,14 @@ a {
     background-color: #ffffff;
 }
 
-
-/* Barbershop-item */
-
 .product-photo-preview {
     list-style: none;
 }
 
-.product-photo-preview li,
+.product-photo-preview li {
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+
 .product-photo-full {
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
 }
@@ -246,7 +530,7 @@ a {
 }
 
 .product-price b {
-    line-height: 14px;
+    line-height: 20px;
     text-align: center;
     background-color: #e5e5e5;
 }
@@ -260,15 +544,28 @@ a {
     list-style: none;
 }
 
-
-/* Стили подвала */
-
 .main-footer {
+    margin-top: 65px;
+    padding: 60px 0;
     color: #ffffff;
     background-color: #212121;
-    background-image: url("../img/pattern-dark.jpg");
+    background-image: url("img/pattern-dark.jpg");
     background-position: 0 0;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+}
+
+.inner-page .main-footer {
+    margin-top: 45px;
+}
+
+.main-footer .container {
+    display: flex;
+}
+
+.footer-contacts {
+    width: 320px;
+    margin: 0;
+    margin-right: 70px;
 }
 
 .footer-contacts a {
@@ -282,67 +579,64 @@ a {
 }
 
 .footer-social {
+    width: 145px;
     text-align: center;
+}
+
+.footer-social b {
+    display: block;
+    margin-bottom: 15px;
 }
 
 .footer-social ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 141px;
     list-style: none;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .social-button {
-    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    background-color: #000000;
+}
+
+.social-button:hover,
+.social-button:focus {
+    background-color: #ffffff;
+}
+
+.social-button:hover path,
+.social-button:focus path {
+    fill: #000000;
 }
 
 .footer-copyrights {
+    width: 150px;
+    margin: 0;
+    margin-left: auto;
     text-align: center;
+}
+
+.footer-copyrights b {
+    display: block;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+.footer-copyrights .button {
+    display: block;
+    margin-right: 0;
 }
 
 .footer-copyrights .button:hover,
 .footer-copyrights .button:focus {
     color: #000000;
     background-color: #ffffff;
-}
-
-
-/* Modal */
-
-.modal {
-    color: #000000;
-    background-color: #f8f3f0;
-    background-image: url("../img/pattern-light.jpg");
-    background-position: 0 0;
-    background-repeat: repeat;
-}
-
-.modal h2 {
-    font-size: 30px;
-    line-height: 42px;
-}
-
-.login-form input[type="text"],
-.login-form input[type="password"] {
-    font: inherit;
-    color: #000000;
-    text-transform: uppercase;
-    background-color: #f9f6f3;
-    border: 2px solid #000000;
-}
-
-.login-form input:focus {
-    border-color: #663D15;
-}
-
-.login-checkbox:hover,
-.login-checkbox:focus {
-    color: #663D15;
-}
-
-.restore {
-    color: #000000;
-    text-decoration: underline;
-}
-
-.restore:hover,
-.restore:focus {
-    text-decoration: none;
 }
